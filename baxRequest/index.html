@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BAX Equipment Request</title>
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+<h1>BAX Equipment Request Form</h1>
+
+<label>Select Request Type</label>
+<select id="requestType">
+<option value="">Select</option>
+<option value="owned">Owned Equipment</option>
+<option value="rental">Request Rental</option>
+</select>
+
+<div id="equipmentSection"></div>
+
+<h3>Requester Info</h3>
+
+<input placeholder="Name" id="name">
+<input placeholder="Project" id="project">
+
+<label>Required By</label>
+<input type="date" id="required">
+
+<label>Expected Return (optional)</label>
+<input type="date" id="return">
+
+<textarea placeholder="Notes (optional)" id="notes"></textarea>
+
+<br><br>
+
+<button onclick="addEquipment()">Add Equipment</button>
+<button onclick="submitForm()">Submit Request</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
